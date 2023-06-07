@@ -1,0 +1,4 @@
+from scratchNNlib.Loss.Loss import Loss
+from scratchNNlib.Loss.CategoricalCrossEntropy import CategoricalCrossEntropy
+from scratchNNlib.Loss.MeanSquare import MeanSquare
+from scratchNNlib.Loss.RootMeanSquare import RootMeanSquare
