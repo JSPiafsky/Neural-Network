@@ -5,7 +5,7 @@ from scratchNNlib.Layers.Layer import Layer
 
 class LinearLayer(Layer):
     def __init__(self, input_size: int, output_size: int):
-        """Linear Layer for Nerual Network"""
+        """Linear Layer for Neural Network"""
         
         super().__init__()
         self.input_size, self.output_size = input_size, output_size
