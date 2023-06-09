@@ -12,6 +12,6 @@ class Softmax(Activation):
         return np.exp(inputs + shiftingConstant)/np.sum(np.exp(inputs + shiftingConstant))
     
     def derivative(self, inputs):
-        grad = self.forward(inputs) * (1 - self.forward(inputs))
+        grad = np.multiply(self.forward(inputs), (1 - self.forward(inputs)))
         return grad
     

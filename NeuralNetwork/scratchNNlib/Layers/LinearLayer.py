@@ -9,7 +9,7 @@ class LinearLayer(Layer):
         
         super().__init__()
         self.input_size, self.output_size = input_size, output_size
-        self.weights = np.random.randn(self.output_size, self.input_size)
+        self.weights = np.random.randn(self.output_size, self.input_size) * np.sqrt(2/self.input_size) # http://arxiv-web3.library.cornell.edu/abs/1502.01852
         self.bias = np.random.randn(self.output_size, 1)
         
         self.coefficents = [
@@ -59,7 +59,7 @@ class LinearLayer(Layer):
         """
         
         inputs = self.inputs if not inputs else inputs
-        gradiants = [derivative(inputs, output_gradient) for derivative in self.coefficents_derivatives]
-        for coefficent, gradiant in zip(self.coefficents, gradiants):
+        gradiants = [derivative(inputs, output_gradient) for derivative in self.coefficents_derivatives] # Calculate Partials with respect to Weights and Bias
+        for coefficent, gradiant in zip(self.coefficents, gradiants): # Update Weight and Bias
             coefficent -= gradiant * learning_rate
-        return self.gradiant(inputs, output_gradient)
+        return self.gradiant(inputs, output_gradient) # Return Gradient

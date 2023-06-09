@@ -29,3 +29,7 @@ class NN:
         gradiant = output_gradient
         for layer in reversed(self.chain):
             gradiant = layer.backward(gradiant, learning_rate)
+
+        def fit(self):
+            '''todo'''
+            pass
