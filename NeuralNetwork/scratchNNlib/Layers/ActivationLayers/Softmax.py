@@ -1,7 +1,7 @@
 import numpy as np
 from numpy.typing import NDArray
 
-from scratchNNlib.Layers.ActivationLayer.Activation import Activation
+from scratchNNlib.Layers.ActivationLayers.Activation import Activation
 
 
 class Softmax(Activation):

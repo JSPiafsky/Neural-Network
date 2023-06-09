@@ -1,4 +1,4 @@
-from scratchNNlib.Layers.ActivationLayer import ReLU
+from scratchNNlib.Layers.ActivationLayers import ReLU
 import numpy as np
 
 a = np.array([[1,-2,3,-4]])
