@@ -6,6 +6,8 @@ class Layer():
         """Base Class for a Neural Network layer"""
         self.coefficents = []
         self.coefficents_derivatives = []
+
+        self.only_for_training = False
         
     def __call__(self, inputs: NDArray) -> NDArray:
         """

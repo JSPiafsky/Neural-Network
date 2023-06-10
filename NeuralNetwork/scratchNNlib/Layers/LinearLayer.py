@@ -21,6 +21,7 @@ class LinearLayer(Layer):
             lambda inputs, output_gradiant: np.dot(output_gradiant, inputs.T),
             lambda inputs, output_gradiant: output_gradiant
         ]
+
     
     def forward(self, inputs: NDArray) -> NDArray:
         """
