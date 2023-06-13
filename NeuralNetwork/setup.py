@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
 setup(
-    name='mypythonlib',
+    name='NeuralNetwork',
     packages=find_packages(include=['scratchNNlib']),
     version='0.1.0',
-    description='My first Python library',
-    author='Me',
+    description='Library for Neural Networks in the vein of pyTorch',
+    author='Jake Piafsky',
     license='MIT',
 )

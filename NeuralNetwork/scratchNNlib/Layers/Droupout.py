@@ -22,7 +22,8 @@ class Dropout(Layer):
         Returns:
             Linear output ndarray of shape (A x 1)
         """
-        self.last_architecture = self.rng.binomial(1, 1 - self.dropout_percent, size = (inputs.size, 1)) 
+        # self.last_architecture = self.rng.binomial(1, 1 - self.dropout_percent, size = (inputs.size, 1)) 
+        self.last_architecture = self.rng.binomial(1, 1 - self.dropout_percent, size = inputs.shape) 
         return inputs * self.last_architecture * 1/(1-self.dropout_percent)
         
     def gradiant(self, inputs: NDArray, output_gradient: NDArray) -> NDArray:

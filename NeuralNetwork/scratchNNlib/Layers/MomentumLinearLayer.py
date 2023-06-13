@@ -4,13 +4,15 @@ from numpy.typing import NDArray
 from scratchNNlib.Layers.LinearLayer import LinearLayer
 
 class MomentumLinearLayer(LinearLayer):
-        def __init__(self, input_size: int, output_size: int):
-            """Implentation of Nesterov Momentum"""
+        def __init__(self, input_size: int, output_size: int, mu: float = 0.99):
+            """Implementation of Nesterov Momentum.
+            Optional perimeter mu is a float specifying the 'friction' during gradient descent """
             
             super().__init__(input_size, output_size)
             self.velocity = [0, 0];
             self.last_velocity = [0, 0];
-            self.mu = 0.99;
+            self.mu = mu;
+
             self.coefficents_derivatives = [
                 lambda inputs, output_gradiant: np.dot(output_gradiant, inputs.T),
                 lambda inputs, output_gradiant: output_gradiant

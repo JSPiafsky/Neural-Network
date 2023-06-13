@@ -4,3 +4,4 @@ from scratchNNlib.Layers.Droupout import Dropout
 from scratchNNlib.Layers.MomentumLinearLayer import MomentumLinearLayer
 
 from scratchNNlib.Layers import ActivationLayers
+from scratchNNlib.Layers import ConvolutionLayers
